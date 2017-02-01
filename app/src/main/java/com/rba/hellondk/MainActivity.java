@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        lblDescription.setText(stringFromJNI());
+        lblDescription.setText(ServiceNDK.getUrl()+" - "+ServiceNDK.getUrlValue()
+                +" - "+ServiceNDK.getUrlValueData());
     }
 
     /**
