@@ -1,0 +1,10 @@
+{
+  "buildFiles": [
+    "/Users/ricardobravo/Documents/projects/HelloNDK/app/Android.mk"
+  ],
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

@@ -1,0 +1,10 @@
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/*
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup
+mkdir -p /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a
+echo [armeabi-v7a] "Gdbserver      ": "[arm-linux-androideabi] /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver"
+install -p /Users/ricardobravo/Library/Android/sdk/ndk-bundle/prebuilt/android-arm/gdbserver/gdbserver /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdbserver
+echo [armeabi-v7a] "Gdbsetup       ": "/Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup"
+echo "set solib-search-path /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a" > /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup
+echo "directory /Users/ricardobravo/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include /Users/ricardobravo/Library/Android/sdk/ndk-bundle/sources/cxx-stl/system" >> /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/armeabi-v7a/gdb.setup
+/Users/ricardobravo/Library/Android/sdk/ndk-bundle/build/core/build-all.mk:89: Android NDK: WARNING: There are no modules to build in this project!    

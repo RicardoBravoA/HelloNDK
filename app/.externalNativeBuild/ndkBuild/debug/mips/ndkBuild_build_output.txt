@@ -1,0 +1,10 @@
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/*
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdbserver
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdb.setup
+mkdir -p /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips
+echo [mips] "Gdbserver      ": "[mipsel-linux-android] /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdbserver"
+install -p /Users/ricardobravo/Library/Android/sdk/ndk-bundle/prebuilt/android-mips/gdbserver/gdbserver /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdbserver
+echo [mips] "Gdbsetup       ": "/Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdb.setup"
+echo "set solib-search-path /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/obj/local/mips" > /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdb.setup
+echo "directory /Users/ricardobravo/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/include /Users/ricardobravo/Library/Android/sdk/ndk-bundle/sources/cxx-stl/system" >> /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/mips/gdb.setup
+/Users/ricardobravo/Library/Android/sdk/ndk-bundle/build/core/build-all.mk:89: Android NDK: WARNING: There are no modules to build in this project!    

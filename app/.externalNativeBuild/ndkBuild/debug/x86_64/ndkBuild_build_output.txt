@@ -1,0 +1,10 @@
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/*
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdbserver
+rm -f /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup
+mkdir -p /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64
+echo [x86_64] "Gdbserver      ": "[x86_64-linux-android] /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdbserver"
+install -p /Users/ricardobravo/Library/Android/sdk/ndk-bundle/prebuilt/android-x86_64/gdbserver/gdbserver /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdbserver
+echo [x86_64] "Gdbsetup       ": "/Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup"
+echo "set solib-search-path /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/obj/local/x86_64" > /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup
+echo "directory /Users/ricardobravo/Library/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64/usr/include /Users/ricardobravo/Library/Android/sdk/ndk-bundle/sources/cxx-stl/system" >> /Users/ricardobravo/Documents/projects/HelloNDK/app/build/intermediates/ndkBuild/debug/lib/x86_64/gdb.setup
+/Users/ricardobravo/Library/Android/sdk/ndk-bundle/build/core/build-all.mk:89: Android NDK: WARNING: There are no modules to build in this project!    
